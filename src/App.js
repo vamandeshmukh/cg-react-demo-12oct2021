@@ -28,24 +28,25 @@ const App = () => {
   return (
     <div>
       <Header />
-      <h1>CG React App</h1>
-      <p> {dataFromChild} </p>
-
-      {/* This will not work */}
-      {/* <p>{myData} </p> */}
-      {/* This will work  */}
-      <p>{myData.abc} </p>
-      <p>{myData.def} </p>
-      <p>{myArray}</p>
-      <p>{myArray[0]}</p>
-      <p>{num}</p>
-      <EmpData
-        // normalFun={aNormalFunction}
-        callParentFun={parentFun}
-        someData={myData}
-        numToPassToChild={num}
-        anotherData={myData}
-      />
+      <div className="container">
+        <p className="display-4 text-primary" >CG React App</p>
+        <p> {dataFromChild} </p>
+        {/* This will not work */}
+        {/* <p>{myData} </p> */}
+        {/* This will work  */}
+        <p>{myData.abc} </p>
+        <p>{myData.def} </p>
+        <p>{myArray}</p>
+        <p>{myArray[0]}</p>
+        <p>{num}</p>
+        <EmpData
+          // normalFun={aNormalFunction}
+          callParentFun={parentFun}
+          someData={myData}
+          numToPassToChild={num}
+          anotherData={myData}
+        />
+      </div>
     </div>
   );
 }

@@ -18,7 +18,7 @@ const EmpData = (props) => {
 
     return (
         <div>
-            <h6>Emp Data Component</h6>
+            <p className="display-4 text-primary">Emp Data Component</p>
             <p>{props.someData.def}</p>
             <p>{props.numToPassToChild}</p>
             {/* try this  */}
@@ -26,7 +26,7 @@ const EmpData = (props) => {
             <p>{props.someOtherData}</p>
             {/* Invoke function from parent  */}
             {/* <p>{props.callParentFun}</p> */}
-            <button onClick={() => { props.callParentFun(childFun) }} >
+            <button className="btn btn-primary" onClick={() => { props.callParentFun(childFun) }} >
                 Pass data From child To parent</button>
         </div>
     );
