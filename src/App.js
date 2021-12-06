@@ -4,7 +4,7 @@ import Header from "./components/Header";
 const App = () => {
   return (
     <div>
-      < Header />
+      <Header />
       <h1>CG React App</h1>
       <p>Welcome to Capgemini React App...</p>
     </div>
