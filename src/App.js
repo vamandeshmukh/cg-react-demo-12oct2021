@@ -1,4 +1,5 @@
 
+import { useEffect } from "react";
 import EmpData from "./components/EmpData";
 import Header from "./components/Header";
 
@@ -6,16 +7,25 @@ const App = () => {
   const num = 10;
   const myData = { abc: 15, def: 25 }
   const myArray = [10, 20, 30];
-  const dataFromChild = 0;
+
+  let dataFromChild = 0;
+
+  useEffect(() => {
+    dataFromChild = 45;
+  }, []);
 
   const parentFun = (arg) => {
+    console.log('parentFun');
     dataFromChild = arg(); // callback
+    console.log(dataFromChild);
   }
 
   return (
     <div>
       <Header />
       <h1>CG React App</h1>
+      <p> {dataFromChild} </p>
+
       {/* This will not work */}
       {/* <p>{myData} </p> */}
       {/* This will work  */}
