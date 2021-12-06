@@ -1,18 +1,19 @@
 
-import { useEffect } from "react";
+// import { useEffect } from "react";
 import EmpData from "./components/EmpData";
 import Header from "./components/Header";
 
 const App = () => {
+  console.log('App');
   const num = 10;
   const myData = { abc: 15, def: 25 }
   const myArray = [10, 20, 30];
 
   let dataFromChild = 0;
 
-  useEffect(() => {
-    dataFromChild = 45;
-  }, []);
+  // useEffect(() => {
+  //   dataFromChild = 45;
+  // }, []);
 
   const parentFun = (arg) => {
     console.log('parentFun');

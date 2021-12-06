@@ -4,6 +4,7 @@
 // 2. from child compoment to parent component - ??
 
 const EmpData = (props) => {
+    console.log('EmpData')
 
     const childData = 2211;
 
