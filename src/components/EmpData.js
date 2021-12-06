@@ -7,6 +7,9 @@ const EmpData = (props) => {
 
     const childData = 2211;
 
+    // props.normalFun();
+
+
     const childFun = () => {
         console.log('childFun');
         return childData;
@@ -22,8 +25,8 @@ const EmpData = (props) => {
             <p>{props.someOtherData}</p>
             {/* Invoke function from parent  */}
             {/* <p>{props.callParentFun}</p> */}
-            <button onClick={() => { props.callParentFun(childFun) }} >Pass Data From Parent To Child</button>
-
+            <button onClick={() => { props.callParentFun(childFun) }} >
+                Pass data From child To parent</button>
         </div>
     );
 }

@@ -20,6 +20,10 @@ const App = () => {
     console.log(dataFromChild);
   }
 
+  // const aNormalFunction = () => {
+  //   console.log('normal funciton');
+  // }
+
   return (
     <div>
       <Header />
@@ -35,7 +39,8 @@ const App = () => {
       <p>{myArray[0]}</p>
       <p>{num}</p>
       <EmpData
-        callParentFun = {parentFun} 
+        // normalFun={aNormalFunction}
+        callParentFun={parentFun}
         someData={myData}
         numToPassToChild={num}
         anotherData={myData}
