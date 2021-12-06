@@ -1,4 +1,5 @@
 
+import EmpData from "./components/EmpData";
 import Header from "./components/Header";
 
 const App = () => {
@@ -7,11 +8,11 @@ const App = () => {
       <Header />
       <h1>CG React App</h1>
       <p>Welcome to Capgemini React App...</p>
+      <EmpData />
     </div>
   );
 }
 export default App;
-
 
 // function App() {
 //   return (
