@@ -4,8 +4,13 @@ import Header from "./components/Header";
 
 const App = () => {
   const num = 10;
-  const myData = {abc : 15, def : 25}
+  const myData = { abc: 15, def: 25 }
   const myArray = [10, 20, 30];
+  const dataFromChild = 0;
+
+  const parentFun = (arg) => {
+    dataFromChild = arg(); // callback
+  }
 
   return (
     <div>
@@ -20,7 +25,8 @@ const App = () => {
       <p>{myArray[0]}</p>
       <p>{num}</p>
       <EmpData
-        someData = {myData}
+        callParentFun = {parentFun} 
+        someData={myData}
         numToPassToChild={num}
         anotherData={myData}
       />
