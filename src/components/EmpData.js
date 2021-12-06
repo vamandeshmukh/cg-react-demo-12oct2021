@@ -1,9 +1,14 @@
 
-const EmpData = () => {
+// pass data - 
+// 1. from parent component to child component - props 
+// 2. from child compoment to parent component - ??
+
+
+const EmpData = (props) => {
     return (
         <div>
-            <h1>Emp Data Component</h1>
-            <p>This is emp data component.</p>
+            <h6>Emp Data Component</h6>
+            <p>{props.numToPassToChild}</p>
         </div>
     );
 }
