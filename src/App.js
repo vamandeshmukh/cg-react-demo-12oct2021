@@ -1,20 +1,24 @@
 
-function App() {
+const App = () => {
   return (
     <div>
       <h1>CG React App</h1>
-      <p>Welcome to Capgemini React App...</p>
-      <p>Welcome to Capgemini React App...</p>
-      <p>Welcome to Capgemini React App...</p>
-      <p>Welcome to Capgemini React App...</p>
-      <p>Welcome to Capgemini React App...</p>
-      <p>Welcome to Capgemini React App...</p>
-      <p>Welcome to Capgemini React App...</p>
       <p>Welcome to Capgemini React App...</p>
     </div>
   );
 }
 export default App;
+
+
+// function App() {
+//   return (
+//     <div>
+//       <h1>CG React App</h1>
+//       <p>Welcome to Capgemini React App...</p>
+//     </div>
+//   );
+// }
+// export default App;
 
 
 
