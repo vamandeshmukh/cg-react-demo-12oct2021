@@ -11,7 +11,13 @@ const App = () => {
     <div>
       <Header />
       <h1>CG React App</h1>
+      {/* This will not work */}
+      {/* <p>{myData} </p> */}
+      {/* This will work  */}
       <p>{myData.abc} </p>
+      <p>{myData.def} </p>
+      <p>{myArray}</p>
+      <p>{myArray[0]}</p>
       <p>{num}</p>
       <EmpData
         someData = {myData}
