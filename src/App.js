@@ -4,13 +4,19 @@ import Header from "./components/Header";
 
 const App = () => {
   const num = 10;
+  const myData = {abc : 15, def : 25}
+  const myArray = [10, 20, 30];
 
   return (
     <div>
       <Header />
       <h1>CG React App</h1>
       <p>{num}</p>
-      <EmpData numToPassToChild={num} />
+      <EmpData
+        someData = {myData}
+        numToPassToChild={num}
+        anotherData={myData}
+      />
     </div>
   );
 }

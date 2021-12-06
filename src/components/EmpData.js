@@ -8,7 +8,11 @@ const EmpData = (props) => {
     return (
         <div>
             <h6>Emp Data Component</h6>
+            <p>{props.someData.def}</p>
             <p>{props.numToPassToChild}</p>
+            {/* try this  */}
+            <p>{props.anotherData}</p>
+            <p>{props.someOtherData}</p>
         </div>
     );
 }
