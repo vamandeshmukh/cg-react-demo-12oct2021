@@ -11,7 +11,7 @@ const EmpData = (props) => {
             <p>{props.someData.def}</p>
             <p>{props.numToPassToChild}</p>
             {/* try this  */}
-            <p>{props.anotherData}</p>
+            {/* <p>{props.anotherData}</p> */}
             <p>{props.someOtherData}</p>
         </div>
     );

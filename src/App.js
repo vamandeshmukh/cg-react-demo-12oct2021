@@ -11,6 +11,7 @@ const App = () => {
     <div>
       <Header />
       <h1>CG React App</h1>
+      <p>{myData.abc} </p>
       <p>{num}</p>
       <EmpData
         someData = {myData}
