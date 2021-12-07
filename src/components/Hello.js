@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { axios } from 'axios';
+import axios from 'axios';
 
 const Hello = () => {
 
@@ -26,8 +26,6 @@ const Hello = () => {
             <p> Data from backend: {message}</p>
         </div>
     )
-
-
 }
 
 export default Hello;
