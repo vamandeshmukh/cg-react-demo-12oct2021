@@ -1,5 +1,5 @@
 
-// import { useEffect } from "react";
+// import { useState } from "react";
 import EmpData from "./components/EmpData";
 import Header from "./components/Header";
 
@@ -9,7 +9,8 @@ const App = () => {
   const myData = { abc: 15, def: 25 }
   const myArray = [10, 20, 30];
 
-  let dataFromChild = 0;
+  const dataFromChild = 0;
+  // const [childDataInParent, setChildDataInParent] = useState(3);
 
   // useEffect(() => {
   //   dataFromChild = 45;
@@ -18,6 +19,7 @@ const App = () => {
   const parentFun = (arg) => {
     console.log('parentFun');
     dataFromChild = arg(); // callback
+    // setChildDataInParent(arg()); // callback
     console.log(dataFromChild);
   }
 
@@ -30,6 +32,7 @@ const App = () => {
       <Header />
       <div className="container">
         <p className="display-4 text-primary" >CG React App</p>
+        {/* <p>childdata in parent : {childDataInParent}</p> */}
         <p> {dataFromChild} </p>
         {/* This will not work */}
         {/* <p>{myData} </p> */}
