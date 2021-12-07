@@ -8,6 +8,7 @@ const Hello = () => {
     useEffect(() => {
         console.log('Hello useEffect');
         setMessage('dummy value meanwhile...');
+
         // axios.get('http://localhost:8082/hello')
         //     .then(() => { })
         //     .catch(() => { });

@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 import EmpData from "./components/EmpData";
 import Header from "./components/Header";
 import Hello from "./components/Hello";
+import Login from "./components/Login";
+import Register from "./components/Register";
 
 const App = () => {
   console.log('Parent component');
@@ -31,6 +33,8 @@ const App = () => {
       <div className="container">
         <p className="display-4 text-primary" >CG React App</p>
         <Hello />
+        {/* <Login /> */}
+        <Register />
         {/* <p>Child data in parent component: {dataFromChild} </p> */}
         {/* This will not work */}
         {/* <p>{myData} </p> */}
