@@ -1,6 +1,6 @@
 
 class AppUser {
-    username;
+    userName;
     password;
     role;
 }
