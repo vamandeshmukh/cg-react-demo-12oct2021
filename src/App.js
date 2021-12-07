@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import EmpData from "./components/EmpData";
 import Header from "./components/Header";
+import Hello from "./components/Hello";
 
 const App = () => {
   console.log('Parent component');
@@ -29,11 +30,12 @@ const App = () => {
       <Header />
       <div className="container">
         <p className="display-4 text-primary" >CG React App</p>
-        <p>Child data in parent component: {dataFromChild} </p>
+        <Hello />
+        {/* <p>Child data in parent component: {dataFromChild} </p> */}
         {/* This will not work */}
         {/* <p>{myData} </p> */}
         {/* This will work  */}
-        <p>{myData.abc} </p>
+        {/* <p>{myData.abc} </p>
         <p>{myData.def} </p>
         <p>{myArray}</p>
         <p>{myArray[0]}</p>
@@ -44,7 +46,7 @@ const App = () => {
           someData={myData}
           numToPassToChild={num}
           anotherData={myData}
-        />
+        /> */}
       </div>
     </div>
   );

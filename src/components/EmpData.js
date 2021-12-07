@@ -22,8 +22,11 @@ const EmpData = (props) => {
 
     // const childData = 2211;
     const [childData, setChildData] = useState(1);
+    // const [childData2, setChildData2] = useState(1); // multipple variables are also possible 
 
     // optionally, state can be initialized with useEffect(); 
+    // useEffect(arg, arg2);
+
     useEffect(() => {
         console.log('Child useEffect');
         setChildData(41548);
