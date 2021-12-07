@@ -1,39 +1,35 @@
 
 // import { useState } from "react";
+import { useEffect, useState } from "react";
 import EmpData from "./components/EmpData";
 import Header from "./components/Header";
 
 const App = () => {
-  console.log('App');
+  console.log('Parent component');
   const num = 10;
   const myData = { abc: 15, def: 25 }
   const myArray = [10, 20, 30];
 
-  const dataFromChild = 0;
-  // const [childDataInParent, setChildDataInParent] = useState(3);
+  const [dataFromChild, setDataFromChild] = useState(4);
 
-  // useEffect(() => {
-  //   dataFromChild = 45;
-  // }, []);
+  useEffect(() => {
+    console.log('parent useEffect');
+    setDataFromChild(5);
+  }, []);
 
   const parentFun = (arg) => {
     console.log('parentFun');
-    dataFromChild = arg(); // callback
-    // setChildDataInParent(arg()); // callback
+    setDataFromChild(arg()); // callback
     console.log(dataFromChild);
   }
 
-  // const aNormalFunction = () => {
-  //   console.log('normal funciton');
-  // }
 
   return (
     <div>
       <Header />
       <div className="container">
         <p className="display-4 text-primary" >CG React App</p>
-        {/* <p>childdata in parent : {childDataInParent}</p> */}
-        <p> {dataFromChild} </p>
+        <p>Child data in parent component: {dataFromChild} </p>
         {/* This will not work */}
         {/* <p>{myData} </p> */}
         {/* This will work  */}
