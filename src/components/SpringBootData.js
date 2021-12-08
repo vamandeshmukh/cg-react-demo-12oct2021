@@ -6,7 +6,7 @@ const SpringBootData = () => {
 
     const [emp, setEmp] = useState(new Employee());
     const [newEmpObj, setNewEmpObj] = useState(new Employee());
-    const [empList, setEmpList] = useState();
+    const [empList, setEmpList] = useState([]);
 
     const handleEmp = (e) => {
         setEmp({
@@ -99,12 +99,25 @@ const SpringBootData = () => {
             </div>
             <p>----------------</p>
             <div>
-                <p>Get All Employees</p>
-                <input
-                    type="button"
-                    value="Search All Employees"
-                    onClick={submitGetAllEmps}
-                />
+                <div>
+                    <p>Get All Employees</p>
+                    <input
+                        type="button"
+                        value="Search All Employees"
+                        onClick={submitGetAllEmps}
+                    />
+                </div>
+                <div>
+                    {/* {empList} */}
+                    {/* {empList.map((arg, arg2)=> { return the processed data })} */}
+                    {empList.map((emp, k) => {
+                        return (
+                            <div k={k}>{emp.eid} {emp.firstName} {emp.salary} </div>
+                        )
+                    })}
+                </div>
+
+                <p>----------------</p>
             </div>
 
         </div>
