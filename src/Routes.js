@@ -1,4 +1,5 @@
-import { Switch as Route, Router /*, Switch */ } from "react-router-dom";
+import {Route, Router /*, Switch */ } from "react-router-dom";
+import { Switch } from "react-switch";
 import EmpData from "./components/EmpData";
 import Header from "./components/Header";
 import Login from "./components/Login";
