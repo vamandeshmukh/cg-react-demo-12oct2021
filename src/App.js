@@ -6,6 +6,7 @@ import Header from "./components/Header";
 import Hello from "./components/Hello";
 import Login from "./components/Login";
 import Register from "./components/Register";
+import SpringBootData from "./components/SpringBootData";
 
 const App = () => {
   console.log('Parent component');
@@ -32,9 +33,10 @@ const App = () => {
       <Header />
       <div className="container">
         <p className="display-4 text-primary" >CG React App</p>
-        <Hello />
+        <SpringBootData />
+        {/* <Hello /> */}
         {/* <Login /> */}
-        <Register />
+        {/* <Register /> */}
         {/* <p>Child data in parent component: {dataFromChild} </p> */}
         {/* This will not work */}
         {/* <p>{myData} </p> */}

@@ -5,6 +5,7 @@ import AppUser from './models/AppUser';
 const Register = (props) => {
 
     const [appUser, setAppUser] = useState(new AppUser());
+    // userName, password, role 
 
     const handleChange = (event) => {
         console.log(event.target.value);
@@ -26,10 +27,18 @@ const Register = (props) => {
             );
     }
 
+    // const [deleteThisVar, setDeleteThisVar] = useState('');
 
+    // const deleteThisMethod = (e) => {
+    //     console.log(e.target);
+    //     setDeleteThisVar(e.target.value);
+    // }
 
     return (
         <div className="container">
+            {/* <p>Please enter some text...</p>
+            <input type="text" name="deleteThisVar" value={deleteThisVar} onChange={deleteThisMethod} />
+            <p>{deleteThisVar}</p> */}
             <p>Register as a new User</p>
             <div>
                 <form>
