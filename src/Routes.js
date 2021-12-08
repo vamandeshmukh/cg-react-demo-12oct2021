@@ -1,5 +1,5 @@
-import {Route, Router /*, Switch */ } from "react-router-dom";
-import { Switch } from "react-switch";
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import EmpData from "./components/EmpData";
 import Header from "./components/Header";
 import Login from "./components/Login";
@@ -15,19 +15,20 @@ const Routes = () => {
                     <Header />
                     <div>
                         <Switch>
-                            {/* <Route path='/home' element={<Home/>} /> */}
-                            {/* <Route path="home"> <Home /> </Route> */}
-                            <Route path="/login" element={<Login />} />
-                            <Route path="/register" element={<Register />} />
-                            <Route path="/empdata" element={<EmpData />} />
-                            <Route path="/spring" element={<SpringBootData />} />
-                        </ Switch>
+                            {/* <Route exact path="/"> <Home /> </Route>
+                            <Route path="/home"> <Home /> </Route> */}
+                            <Route path="/empdata"> <EmpData /> </Route>
+                            <Route path="/spring"> <SpringBootData /> </Route>
+                            <Route path="/login"> <Login /> </Route>
+                            <Route path="/register"> <Register /> </Route>
+                            {/* <Route path="/*"> <PageNotFound /> </Route> */}
+                        </Switch>
                     </div>
+                    {/* <Footer /> */}
                 </div>
             </Router>
         </div>
     );
-
 }
 
 export default Routes;
