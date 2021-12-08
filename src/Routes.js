@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import Hello from './components/Hello';
 import Home from './components/Home';
 import Login from "./components/Login";
+import Logout from './components/Logout';
 import Page404 from './components/Page404';
 import Register from "./components/Register";
 import SpringBootData from "./components/SpringBootData";
@@ -23,8 +24,9 @@ const Routes = () => {
                             <Route path="/hello"> <Hello /> </Route>
                             <Route path="/emp"> <EmpData /> </Route>
                             <Route path="/spring"> <SpringBootData /> </Route>
-                            <Route path="/login"> <Login /> </Route>
                             <Route path="/register"> <Register /> </Route>
+                            <Route path="/login"> <Login /> </Route>
+                            <Route path="/logout"> <Logout /> </Route>
                             <Route path="/*"> <Page404 /> </Route>
                         </Switch>
                     </div>
