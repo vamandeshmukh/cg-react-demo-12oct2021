@@ -22,9 +22,8 @@ const SpringBootData = () => {
         });
     }
 
-    const submitGetEmpById = () => {
+    const submitGetEmpById = (evt) => {
         console.log(emp.eid);
-        // axios.get(`http://localhost:8082/emp/getempbyid/101`)
         axios.get(`http://localhost:8082/emp/getempbyid/${emp.eid}`)
             .then((response) => {
                 setEmp(response.data);
@@ -33,19 +32,19 @@ const SpringBootData = () => {
                 setEmp({});
                 alert("Employee not found.");
             });
+        // evt.preventDefault();
     }
-    useEffect(() => {
-        setNewEmpObj({});
-    }, []);
 
-    const submitAddEmp = () => {
+    const submitAddEmp = (evt) => {
         axios.post(`http://localhost:8082/emp/addemp`, newEmpObj)
             .then((response) => {
                 setNewEmpObj(response.data);
+                alert('Employee added successfully.')
             })
             .catch(() => {
                 alert("Employee could not be added.");
             });
+        evt.preventDefault();
     }
 
     return (
@@ -59,34 +58,35 @@ const SpringBootData = () => {
             <p>----------------</p>
             <div>
                 <p>Add New Employee</p>
-                <div>
-                    <input
-                        type="text"
-                        id="firstName"
-                        name="firstName"
-                        value={newEmpObj.firstName}
-                        onChange={handleAddEmp}
-                        placeholder="Enter First Name" />
-                    <input
-                        type="number"
-                        id="salary"
-                        name="salary"
-                        value={newEmpObj.salary}
-                        onChange={handleAddEmp}
-                        placeholder="Enter salary" />
-                    <input
-                        type="submit"
-                        name="Add Employee"
-                        onClick={submitAddEmp} />
-                </div>
+                <form onSubmit={submitAddEmp}>
+                    <div>
+                        <input
+                            type="text"
+                            id="firstName"
+                            name="firstName"
+                            value={newEmpObj.firstName}
+                            onChange={handleAddEmp}
+                            placeholder="Enter First Name" />
+                        <input
+                            type="number"
+                            id="salary"
+                            name="salary"
+                            value={newEmpObj.salary}
+                            onChange={handleAddEmp}
+                            placeholder="Enter salary" />
+                        <input
+                            // type="button"
+                            type="submit"
+                            value="Add Employee"
+                        // onClick={submitAddEmp} 
+                        />
+                    </div>
+                </form>
                 <p>{newEmpObj.eid} {newEmpObj.firstName} {newEmpObj.salary}</p>
             </div>
-
             <p>----------------</p>
-
         </div>
     );
-
 }
 
 export default SpringBootData;
