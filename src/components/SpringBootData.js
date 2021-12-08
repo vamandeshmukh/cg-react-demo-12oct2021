@@ -6,6 +6,7 @@ const SpringBootData = () => {
 
     const [emp, setEmp] = useState(new Employee());
     const [newEmpObj, setNewEmpObj] = useState(new Employee());
+    const [empList, setEmpList] = useState();
 
     const handleEmp = (e) => {
         setEmp({
@@ -20,6 +21,18 @@ const SpringBootData = () => {
             ...newEmpObj,
             [e.target.name]: e.target.value
         });
+    }
+
+    const submitGetAllEmps = () => {
+        axios.get(`http://localhost:8082/emp/getallemps`)
+            .then((response) => {
+                setEmpList(response.data);
+                console.log(response.data);
+                console.log(empList);
+            })
+            .catch(() => {
+                alert('Something is wrong!');
+            });
     }
 
     const submitGetEmpById = (evt) => {
@@ -85,6 +98,15 @@ const SpringBootData = () => {
                 <p>{newEmpObj.eid} {newEmpObj.firstName} {newEmpObj.salary}</p>
             </div>
             <p>----------------</p>
+            <div>
+                <p>Get All Employees</p>
+                <input
+                    type="button"
+                    value="Search All Employees"
+                    onClick={submitGetAllEmps}
+                />
+            </div>
+
         </div>
     );
 }
