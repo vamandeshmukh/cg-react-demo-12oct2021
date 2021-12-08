@@ -6,21 +6,32 @@ const Header = () => {
         <header class="header sticky-top">
             <nav class="navbar navbar-fixed-top navbar-expand-lg navbar-dark bg-dark">
                 <div class="container">
-                    <img src="https://www.capgemini.com/wp-content/themes/capgemini-komposite/assets/images/logo.svg"
-                        height="24px" alt="Capgemini" />
+                    <Link className="navbar-brand" to="/">
+                        <img src="https://www.capgemini.com/wp-content/themes/capgemini-komposite/assets/images/logo.svg"
+                            height="24px" alt="Capgemini" />
+                    </Link>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarResponsive">
                         <ul class="navbar-nav ml-auto">
                             <li className="nav-item">
-                                <sapn className="nav-link" to="/#" >Home</sapn>
+                                <Link className="nav-link" to="/hello" >Hello</Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/emp" >Emp</Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/spring" >Spring</Link>
                             </li>
                             <li className="nav-item">
                                 <Link className="nav-link" to="/register" >Register</Link>
                             </li>
                             <li className="nav-item">
                                 <Link className="nav-link" to="/login" >Login</Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/#" >Logout</Link>
                             </li>
                         </ul>
                     </div>

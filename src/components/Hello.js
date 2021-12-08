@@ -24,6 +24,7 @@ const Hello = () => {
 
     return (
         <div>
+            <h1 className="display-4 text-primary mt3">Hello</h1>
             <p> Data from backend: {message}</p>
         </div>
     )
