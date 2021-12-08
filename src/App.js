@@ -1,12 +1,4 @@
 
-// import { useState } from "react";
-import { useEffect, useState } from "react";
-import EmpData from "./components/EmpData";
-import Header from "./components/Header";
-import Hello from "./components/Hello";
-import Login from "./components/Login";
-import Register from "./components/Register";
-import SpringBootData from "./components/SpringBootData";
 import Routes from "./Routes";
 
 const App = () => {
@@ -16,6 +8,7 @@ const App = () => {
     </ div>
   );
 }
+
 export default App;
 
 
