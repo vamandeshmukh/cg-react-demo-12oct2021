@@ -1,4 +1,5 @@
 import empReducer from './EmpSlice';
+import depReducer from './DepSlice';
 
 // steps - 
 // 1. create store - only one 
@@ -15,7 +16,8 @@ import { configureStore } from "@reduxjs/toolkit";
 const store = configureStore(
     {
         reducer: {
-            emp: empReducer
+            emp: empReducer,
+            dep: depReducer
             // ,
             // anotherComponent: anotherComponentReducer
         }

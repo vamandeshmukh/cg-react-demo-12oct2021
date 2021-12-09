@@ -1,9 +1,12 @@
 
 import { getEmpById } from "../redux/EmpSlice";
+
+// useDispatch - send data to store,  useSelector - fetch data from store 
 import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
 import { useState } from "react";
-
+import DepData from "./DepData";
+import Employee from './models/Employee';
 // step 4 - use redux store and reducers in components 
 
 const EmpData = (props) => {
@@ -11,17 +14,51 @@ const EmpData = (props) => {
     // ctearing state is not required with redux  
     // const [variable, setVariable] = useState('');
 
+    const [emp, setEmp] = useState(new Employee());
     const dispatch = useDispatch();
 
     // this data is coming from store 
+    // const empDataFromStore = useSelector((arg) => {return arg.nameOfTheState.data});
+    // const empDataFromStore = useSelector((arg) =>  arg.nameOfTheState.data );
+
     const empDataFromStore = useSelector((state) => state.emp.empState);
 
+    const handleEmp = (e) => {
+        setEmp({
+            ...emp,
+            [e.target.name]: e.target.value
+        });
+    }
+
+    const submitGetEmpById = (evt) => {
+        console.log(emp.eid);
+        axios.get(`http://localhost:8082/emp/getempbyid/${emp.eid}`)
+            .then((response) => {
+                dispatch(response.data);
+                // setEmp(response.data);
+            })
+            .catch(() => {
+                setEmp({});
+                alert("Employee not found.");
+            });
+        // evt.preventDefault();
+    }
 
     return (
         <div>
             <h1 className="display-4 text-primary mt-3" >Employee Data Component</h1>
             <p>Employee data component</p>
             <p>Data from store: {empDataFromStore.eid} {empDataFromStore.firstName} {empDataFromStore.salary}</p>
+
+            <div>
+                <p>Fetch data from backend, store it in redux store and get it to component</p>
+                <input type="number" id="eid" name="eid" value={emp.eid} onChange={handleEmp} placeholder="Emter eid to search" />
+                <input type="submit" name="Find Employee" onClick={submitGetEmpById} />
+
+            </div>
+
+
+            {/* <DepData /> */}
         </div>
     );
 }

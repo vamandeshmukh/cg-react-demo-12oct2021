@@ -11,7 +11,6 @@ const SpringBootData = () => {
     const [empList, setEmpList] = useState([]);
 
     const handleEmp = (e) => {
-
         setEmp({
             ...emp,
             [e.target.name]: e.target.value
