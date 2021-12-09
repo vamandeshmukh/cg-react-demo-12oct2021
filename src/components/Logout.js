@@ -12,6 +12,8 @@ const Logout = () => {
 }
 export default Logout;
 
+
+
 // const Logout = () => {
 
 //     // Source: https://getbootstrap.com/docs/4.0/components/modal/
