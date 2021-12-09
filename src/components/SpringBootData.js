@@ -4,12 +4,14 @@ import Employee from "./models/Employee";
 
 const SpringBootData = () => {
 
+    // state - for the component 
     const [emp, setEmp] = useState(new Employee());
     const [newEmpObj, setNewEmpObj] = useState(new Employee());
     const [displayEmpObj, setDisplayEmpObj] = useState(new Employee());
     const [empList, setEmpList] = useState([]);
 
     const handleEmp = (e) => {
+
         setEmp({
             ...emp,
             [e.target.name]: e.target.value
