@@ -24,6 +24,7 @@ const EmpData = (props) => {
     const empDataFromStore = useSelector((state) => state.emp.empState);
 
     const handleEmp = (e) => {
+        console.log('handleEmp');
         setEmp({
             ...emp,
             [e.target.name]: e.target.value
@@ -31,10 +32,10 @@ const EmpData = (props) => {
     }
 
     const submitGetEmpById = (evt) => {
-        console.log(emp.eid);
+        console.log('submitGetEmpById');
         axios.get(`http://localhost:8082/emp/getempbyid/${emp.eid}`)
             .then((response) => {
-                dispatch(response.data);
+                dispatch(getEmpById(response.data));
                 // setEmp(response.data);
             })
             .catch(() => {

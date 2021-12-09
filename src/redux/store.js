@@ -13,6 +13,7 @@ import { configureStore } from "@reduxjs/toolkit";
 // latest way 
 
 // step 1 for redux 
+console.log('store');
 const store = configureStore(
     {
         reducer: {
