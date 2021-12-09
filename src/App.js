@@ -3,7 +3,7 @@ import Routes from "./Routes";
 
 const App = () => {
   return (
-    <div>
+    <div className="bg-light">
       <Routes />
     </ div>
   );

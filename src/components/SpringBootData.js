@@ -112,8 +112,6 @@ const SpringBootData = () => {
                     />
                 </div>
                 <div className="col-4">
-                    {/* {empList} */}
-                    {/* {empList.map((arg, arg2)=> { return the processed data })} */}
                     <div className="border border-light">
                         <table className="table table-light table-striped">
                             <thead>
