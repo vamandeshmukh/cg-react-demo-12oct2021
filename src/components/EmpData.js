@@ -1,14 +1,43 @@
 
+import { getEmpById } from "../redux/EmpSlice";
+import { useDispatch, useSelector } from "react-redux";
+import axios from "axios";
+import { useState } from "react";
+
+// step 4 - use redux store and reducers in components 
+
 const EmpData = (props) => {
-    console.log('Child component');
+
+    // ctearing state is not required with redux  
+    // const [variable, setVariable] = useState('');
+
+    const dispatch = useDispatch();
+
+    // this data is coming from store 
+    const empDataFromStore = useSelector((state) => state.emp.empState);
+
+
     return (
         <div>
             <h1 className="display-4 text-primary mt-3" >Employee Data Component</h1>
             <p>Employee data component</p>
+            <p>Data from store: {empDataFromStore.eid} {empDataFromStore.firstName} {empDataFromStore.salary}</p>
         </div>
     );
 }
 export default EmpData;
+
+
+// const EmpData = (props) => {
+//     console.log('Child component');
+//     return (
+//         <div>
+//             <h1 className="display-4 text-primary mt-3" >Employee Data Component</h1>
+//             <p>Employee data component</p>
+//         </div>
+//     );
+// }
+// export default EmpData;
 
 // // props - arguments to a component 
 // // pass data - 
