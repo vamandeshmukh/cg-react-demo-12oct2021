@@ -12,6 +12,8 @@ import SpringBootData from "./components/SpringBootData";
 
 const Routes = () => {
 
+    // all routes here 
+
     return (
         <div>
             <Router>
