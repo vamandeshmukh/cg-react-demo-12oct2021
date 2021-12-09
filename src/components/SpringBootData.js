@@ -113,25 +113,35 @@ const SpringBootData = () => {
                 </div>
                 <div className="col-4">
                     <div className="border border-light">
-                        <table className="table table-light table-striped">
+                    </div>
+                </div>
+                <p>----------------</p>
+            </div>
+            {/* Google Material UI Table  */}
+            <div>
+                <div class="mdc-data-table">
+                    <div class="mdc-data-table__table-container">
+                        <table class="mdc-data-table__table">
                             <thead>
-                                <tr>
-                                    <th>Eid</th>
-                                    <th>Name</th>
-                                    <th>Salary</th>
+                                <tr class="mdc-data-table__header-row">
+                                    <th class="mdc-data-table__header-cell" role="columnheader" scope="col">Eid</th>
+                                    <th class="mdc-data-table__header-cell mdc-data-table__header-cell--numeric" role="columnheader" scope="col">Name</th>
+                                    <th class="mdc-data-table__header-cell" role="columnheader" scope="col">Salary</th>
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody class="mdc-data-table__content">
                                 {empList.map((emp, k) => {
                                     return (
-                                        <tr k={k}> <td>{emp.eid}</td>  <td>{emp.firstName}</td> <td>{emp.salary}</td></tr>
+                                        <tr k={k} className="mdc-data-table__row" scope="row">
+                                            <td className="mdc-data-table__cell">{emp.eid}</td>
+                                            <td className="mdc-data-table__cell">{emp.firstName}</td>
+                                            <td className="mdc-data-table__cell">{emp.salary}</td></tr>
                                     )
                                 })}
                             </tbody>
                         </table>
                     </div>
                 </div>
-                <p>----------------</p>
             </div>
         </div>
     );
