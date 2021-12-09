@@ -23,7 +23,7 @@ const EmpData = () => {
             .catch(() => {
                 alert(`Employee with ${eid} not found.`);
             });
-            console.log(Object.keys(empList));
+        console.log(Object.keys(empList));
         setEid('');
     }
 
@@ -47,7 +47,7 @@ const EmpData = () => {
             <div className="col-4 border border-light shadow p-3 mb-5 bg-white">
                 <p>Find employee by id</p>
                 <form className="form form-group form-primary" onSubmit={submitGetEmpById}>
-                    <input className="form-control mt-3" type="number" id="eid" name="eid" value={eid} onChange={handleEmp} placeholder="Enter eid to search" autoFocus />
+                    <input className="form-control mt-3" type="number" id="eid" name="eid" value={eid} onChange={handleEmp} placeholder="Enter eid to search" autoFocus required />
                     <input className="form-control mt-3 btn btn-primary" type="submit" value="Find Employee" />
                 </form>
                 <p>Data from store: {empDataFromStore.eid} {empDataFromStore.firstName} {empDataFromStore.salary}</p>

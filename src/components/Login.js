@@ -4,9 +4,9 @@ import { useState, useEffect } from 'react';
 import axios from "axios";
 import AppUser from './models/AppUser';
 
-const Login = (props) => {
+const Login = () => {
 
-    const history = useHistory();
+    // const history = useHistory();
 
     const [appUser, setAppUser] = useState(new AppUser());
     const [credentials, setCredentials] = useState('');
@@ -24,11 +24,13 @@ const Login = (props) => {
         axios.post(`http://localhost:8082/login`, appUser)
             .then((response) => {
                 console.log(response.data);
-                // for conditional rendering of a few menu items 
                 sessionStorage.setItem('isUserLoggedIn', true);
                 alert('Success');
-                history.push('/home');
+                window.location.assign('/home');
+                // history.push('/home');
             }).catch((error) => {
+                sessionStorage.setItem('isUserLoggedIn', false);
+                sessionStorage.clear();
                 console.log(error.response);
                 setCredentials("Enter proper credentials.");
             });
@@ -49,6 +51,7 @@ const Login = (props) => {
                             placeholder="Enter username"
                             value={appUser.userName}
                             onChange={handleAppUser}
+                            autoFocus
                             required
                         />
                         <input
@@ -59,7 +62,9 @@ const Login = (props) => {
                             className="form-control mb-3"
                             placeholder="Enter password"
                             value={appUser.password}
-                            onChange={handleAppUser} />
+                            onChange={handleAppUser}
+                            required
+                        />
                         <div class="form-group">
                             <select class="form-control mb-3" name="role" id="role" onChange={handleAppUser}>
                                 <option value="Role">Select a role</option>
