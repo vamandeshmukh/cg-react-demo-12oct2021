@@ -1,13 +1,31 @@
+import { useHistory } from "react-router-dom";
+
 const Logout = () => {
 
+    const history = useHistory();
 
+    const submitLogOut = () => {
+        sessionStorage.setItem('isUserLoggedIn', false);
+        sessionStorage.clear();
+        history.push("/login");
+    }
 
     return (
-        <div className="mt-3 mb-3">
-            <h1 className="display-4 text-primary" >Logout Component</h1>
-
-
-        </div>
+        <div className="container">
+            <div className="col-4 mt-3" >
+                <h1 className="display-4 text-primary">Logout</h1>
+                <div >
+                    <input
+                        type="submit"
+                        id="submit"
+                        name="submit"
+                        className="form-control btn btn-primary mb-3"
+                        value="Logout"
+                        onClick={submitLogOut}
+                    />
+                </div>
+            </div>
+        </div >
     );
 }
 export default Logout;

@@ -35,7 +35,7 @@ const EmpData = (props) => {
     const submitGetEmpById = (evt) => {
         evt.preventDefault();
         console.log('submitGetEmpById');
-        axios.get(`http://localhost:8082/emp/getempbyid/${emp.eid}`)
+        axios.get(`emp/getempbyid/${emp.eid}`)
             .then((response) => {
                 dispatch(getEmpById(response.data));
                 setEmp({ eid: '' });
@@ -50,7 +50,8 @@ const EmpData = (props) => {
     const submitGetAllEmps = (evt) => {
         evt.preventDefault();
         console.log('submitGetAllEmps');
-        axios.get(`http://localhost:8082/emp/getallemps`)
+        axios.get(`emp/getallemps`)
+        // axios.get(`http://localhost:8082/emp/getallemps`)
             .then((response) => {
                 dispatch(getAllEmps(response.data));
             })

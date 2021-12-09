@@ -21,12 +21,12 @@ const Login = (props) => {
     };
 
     const submitAppUser = (event) => {
-
         axios.post(`http://localhost:8082/login`, appUser)
             .then((response) => {
                 console.log(response.data);
-                localStorage.setItem('appUser', appUser);
-                alert("Success");
+                // for conditional rendering of a few menu items 
+                sessionStorage.setItem('isUserLoggedIn', true);
+                alert('Success');
                 history.push('/home');
             }).catch((error) => {
                 console.log(error.response);

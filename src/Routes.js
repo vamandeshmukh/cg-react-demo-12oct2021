@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import EmpData from "./components/EmpData";
@@ -11,8 +12,6 @@ import Register from "./components/Register";
 import SpringBootData from "./components/SpringBootData";
 
 const Routes = () => {
-
-    // all routes here 
 
     return (
         <div>
