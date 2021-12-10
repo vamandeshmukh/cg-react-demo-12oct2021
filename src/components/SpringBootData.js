@@ -64,8 +64,7 @@ const SpringBootData = () => {
     }
 
     return (
-        <div>
-
+        <div className="container">
             <p className="display-4 text-primary mt-3">Spring Boot Data</p>
             <p>Search Employee By Id</p>
             <input type="number" id="eid" name="eid" value={emp.eid} onChange={handleEmp} placeholder="Emter eid to search" />
@@ -118,7 +117,7 @@ const SpringBootData = () => {
                 <p>----------------</p>
             </div>
             {/* Google Material UI Table  */}
-            <div>
+            <div className="container">
                 <div class="mdc-data-table">
                     <div class="mdc-data-table__table-container">
                         <table class="mdc-data-table__table">

@@ -40,7 +40,7 @@ const EmpData = () => {
     }
 
     return (
-        <div>
+        <div className="container">
             <h1 className="display-4 text-primary mt-3 mb-3" >Employee Component</h1>
             <p>Fetch data from backend, store it in redux store and get it to component</p>
 
