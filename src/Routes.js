@@ -25,7 +25,7 @@ const Routes = () => {
                 <Router>
                     <div>
                         <Header />
-                        <div className="container">
+                        <div>
                             <Switch>
                                 <Route exact path="/" loginStatus > <Home /> </Route>
                                 <Route path="/home" loginStatus> <Home /> </Route>
