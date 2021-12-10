@@ -3,6 +3,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
 import { getEmpById, getAllEmps } from '../redux/EmpSlice';
 
+import { Store } from "redux";
+import { Provider } from "react";
+
 const EmpData = () => {
 
     const [eid, setEid] = useState('');

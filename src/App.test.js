@@ -1,6 +1,11 @@
 import { render, screen } from '@testing-library/react';
-import { act } from 'react-dom/test-utils';
+// import { act } from 'react-dom/test-utils';
 import Hello from './components/Hello';
+import EmpData from './components/EmpData';
+import SpringBootData from './components/SpringBootData';
+import { Provider } from 'react-redux';
+import store from './redux/store';
+
 
 // Website https://jestjs.io/ 
 // learning resources https://jestjs.io/docs/getting-started  
@@ -8,11 +13,32 @@ import Hello from './components/Hello';
 
 
 // positive test case 
-test('render Data from backend', () => {
+test('render Data from Hello', () => {
   render(<Hello />);
   const linkElement = screen.getByText(/Data from backend/);
   expect(linkElement).toBeInTheDocument();
 });
+
+// positive test case 
+test('render Data from EmpData', () => {
+  render(
+    <Provider store={store} >
+      <EmpData />
+    </Provider>);
+  const linkElement = screen.getByText('Employee Component');
+  expect(linkElement).toBeInTheDocument();
+});
+
+// positive test case 
+test('render Data from SpringBootData', () => {
+  render(
+    <Provider store={store} >
+      <SpringBootData />
+    </Provider>);
+  const linkElement = screen.getByText('Get All Employees');
+  expect(linkElement).toBeInTheDocument();
+});
+
 
 // // negative test case 
 // test('not to render wrong data', () => {

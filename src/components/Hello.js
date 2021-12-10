@@ -6,7 +6,7 @@ const Hello = () => {
     const [message, setMessage] = useState();
 
     useEffect(() => {
-        console.log('Hello useEffect');
+        // console.log('Hello useEffect');
         setMessage('dummy value meanwhile...');
 
         // axios.get('http://localhost:8082/hello')
