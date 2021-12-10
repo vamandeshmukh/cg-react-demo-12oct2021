@@ -2,7 +2,10 @@ import { render, screen } from '@testing-library/react';
 import { act } from 'react-dom/test-utils';
 import Hello from './components/Hello';
 
-// act(); 
+// Website https://jestjs.io/ 
+// learning resources https://jestjs.io/docs/getting-started  
+//api https://jestjs.io/docs/api  
+
 
 // positive test case 
 test('render Data from backend', () => {
