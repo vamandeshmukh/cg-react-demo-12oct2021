@@ -11,18 +11,19 @@
 
 import React, { useEffect, useState } from 'react';
 import Hello3 from './Hello3';
+import HelloContext from './HelloContext';
 
 const Hello2 = () => {
 
-    const [myStyle, setMyStyle] = useState({});
-    const MyStyle = React.createContext({});
+    const [myStyle, setMyStyle] = useState({ color: 'blue' });
+
     return (
         <div>
             <p>Hello2 Component</p>
             <p>Data from Hello3</p>
-            <MyStyle.Provider value={{ color: 'blue' }}>
+            <HelloContext.Provider value={myStyle}>
                 <Hello3 />
-            </MyStyle.Provider>
+            </HelloContext.Provider>
         </div>
     )
 
