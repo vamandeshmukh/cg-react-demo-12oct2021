@@ -12,7 +12,7 @@
 import React, { useEffect, useState } from 'react';
 import Hello3 from './Hello3';
 import HelloContext from './HelloContext';
-
+ 
 const Hello2 = () => {
 
     const [myStyle, setMyStyle] = useState({ color: 'blue' });
