@@ -20,7 +20,7 @@ const EmpData = () => {
 
     const submitGetEmpById = (evt) => {
         evt.preventDefault();
-        console.log('submitGetEmpById');
+        console.log('submitGetEmpById'); 
         getEmpByIdService(eid)
             .then((response) => { dispatch(getEmpById(response.data)) })
             .catch(() => {

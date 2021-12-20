@@ -45,7 +45,7 @@ const Header = () => {
     else {
         return (
             <header class="header sticky-top">
-                <nav class="navbar navbar-fixed-top navbar-expand-lg navbar-dark bg-dark">
+                <nav class="navbar navbar-fixed-top navbar-expand-sm navbar-dark bg-dark">
                     <div class="container">
                         <Link className="navbar-brand" to="/">
                             <img src="https://www.capgemini.com/wp-content/themes/capgemini-komposite/assets/images/logo.svg"
@@ -56,6 +56,10 @@ const Header = () => {
                         </button>
                         <div class="collapse navbar-collapse" id="navbarResponsive">
                             <ul class="navbar-nav ml-auto">
+
+                                <li className="nav-item">
+                                    <Link className="nav-link" to="/hello" >Hello</Link>
+                                </li>
 
                                 <li className="nav-item">
                                     <Link className="nav-link" to="/register" >Register</Link>
@@ -127,12 +131,12 @@ export default Header;
 
 
 
-// types of components in react 
-// 1. function components 
-// 2. class components 
+// types of components in react
+// 1. function components
+// 2. class components
 
 
-// function component 
+// function component
 // const Header = () => {
 
 //     return (
@@ -143,7 +147,7 @@ export default Header;
 // }
 // export default Header;
 
-// class component  
+// class component
 // import React from "react";
 // class Header extends React.Component {
 

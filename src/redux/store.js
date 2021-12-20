@@ -12,7 +12,7 @@ import { configureStore } from "@reduxjs/toolkit";
 // note - redux store can be created in multiple different ways. 
 // latest way 
 
-// step 1 for redux 
+// step 1 for redux  
 console.log('store');
 const store = configureStore(
     {

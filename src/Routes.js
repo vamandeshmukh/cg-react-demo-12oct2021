@@ -52,6 +52,7 @@ const Routes = () => {
                             <Switch>
                                 <Route exact path="/" loginStatus > <Home /> </Route>
                                 <Route path="/home" loginStatus> <Home /> </Route>
+                                <Route path="/hello"> <Hello /> </Route>
                                 <Route path="/register"> <Register /> </Route>
                                 <Route path="/login"> <Login /> </Route>
                                 <Route path="/*"> <Page404 /> </Route>
